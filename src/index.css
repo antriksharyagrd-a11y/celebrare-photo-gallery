@@ -1,0 +1,41 @@
+/* src/index.css
+   -------------------------------------------------------------
+   Tailwind CSS v4 — the ENTIRE setup is this one import.
+   No tailwind.config.js, no postcss.config.js required.
+   (v4 reads your CSS and utility classes automatically.)
+   ------------------------------------------------------------- */
+@import "tailwindcss";
+
+/* Brand design tokens — usable as Tailwind utilities, e.g. `font-display` */
+@theme {
+  --font-display: "Bricolage Grotesque", "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --color-paper: #fffdf8;
+  --color-brand-50: #fffbeb;
+  --color-brand-400: #fbbf24;
+  --color-brand-600: #d97706;
+}
+
+/* Base polish — scoped to our app, never fighting Tailwind preflight */
+body {
+  background-color: #fffdf8;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #fde68a;
+  color: #451a03;
+}
+
+/* Buttery scrolling for the favourites drawer and code blocks */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyboard users deserve a visible focus style everywhere */
+:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
